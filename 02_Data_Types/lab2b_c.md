@@ -18,6 +18,13 @@
 * Keep in mind that you have not learned Python formatting for print or user input. 
   * Simple/ugly printing is allowed here. 
   * Hard code the user input
+  
+main()
+item = 70.00
+tax = .07
+taxamount = item * tax
+total = taxamount + item
+print(total)
 
 ---
 
