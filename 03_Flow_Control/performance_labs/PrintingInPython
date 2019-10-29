@@ -1,0 +1,153 @@
+Please complete the following questions. Mess around with formatting as much as possible, use the 3 methods of formatting that we learned. Old % formatting, str.format(), and formatted string literals        ( print (f’ ‘) ). Refer to your notes or the python docs to get examples on how to do each.
+
+https://docs.python.org/3/tutorial/inputoutput.html 
+
+ 1. Write a program that displays the following information:
+	• Your name
+	• Your address, with city, state, and ZIP
+	• Your telephone number
+	• Your MOS
+main()
+	name = input(“Please enter your name:”)
+	streetaddress = input(“Please enter your street address:”)
+	city = input(“Please enter your city:”)
+	state = input(“please enter your two-letter state abbreviation:”)
+	zipcode = input(“Please enter your 5-digit zipcode:”)
+	telephone = input(“Please enter your phone number in strictly number format:”)
+	mos = input(“Please enter your MOS”)
+
+	state = state.upper()
+	print(“Name: {}”.format(name))
+	print(“Address: {} {} {} {}”.format(streetaddress, city, state, zipcode”))
+	print(“Telephone: ‘{:d}’”.format(telephone))
+	print(“MOS: {}”.format(mos))
+end()	
+
+
+2.  A company has determined that its annual profit is typically 23 percent of total sales. Write
+a program that asks the user to enter the projected amount of total sales, and then displays
+the profit that will be made from that amount.
+
+main()
+percent = 0.23
+projectedsales = input(“Please enter the projected amount of total sales.”)
+profit = projectedsales * percent
+print ‘%f’ % (profit)
+
+
+3.  One acre of land is equivalent to 43,560 square feet. Write a program that asks the user to
+enter the total square feet in a tract of land and calculates the number of acres in the tract.
+
+main()
+feetperacre = 43560
+totalsquarefeet = input("Please enter the total square feet in the tract of land.")
+acre = totalsquarefeet / feetperacre
+acreageinfo = {'feet': feetperacre, 'total': totalsquarefeet, 'total acres': acre}
+print("There are {feet} feet in an acre. You input that your tract is {total} square feet large.
+With this information, your tract is {total acres} acres large.".format(**acreageinfo))
+end()
+
+ 4. A customer in a store is purchasing five items. Write a program that asks for the price of
+each item, and then displays the subtotal of the sale, the amount of sales tax, and the total.
+Assume the sales tax is 6 percent.
+
+main()
+//Want to eventually make a loop that asks for user input on items and then adds each item into a list
+//or go to the dictionary and then will input the values entered by the user (key and value).
+//Then once displayed, the price will be shown for the item
+	item1 = input(Enter the price for the first item:")
+	item2 = input(Enter the price for the second item:")
+	item3 = input(Enter the price for the third item:")
+	item4 = input(Enter the price for the fourth item:")
+	item5 = input(Enter the price for the fifth item:")
+	sum = item1 + item2 + item3 + item4 + item5
+	salestax = .07
+	total = (salestax * sum) + sum
+
+	//Does the price or key value attached to the item number have to be a new variable?
+	//items = {'item1': 'price', 'item2': 'price', 'item3': 'price', 'item4': 'price', 'item5': 'price'}
+	// Could do a dictionary and then for each item within the dictionary (key), then add the key for the sum function.
+	
+	math = {'subtotal': sum, 'tax': salestax, 'total': total}
+	print("The the subtotal of the items purchased is {sum} with the tax amount being {salestax}.
+	This leaves the total to be {total}.".format(**math))
+
+5.  Assuming there are no accidents or delays, the distance that a car travels down the interstate can be calculated with the following formula:
+Distance = Speed * Time
+
+ A car is traveling at 60 miles per hour. Write a program that displays the following:
+	• The distance the car will travel in 5 hours
+	• The distance the car will travel in 8 hours
+	• The distance the car will travel in 12 hours
+//Could create a dictionary of the values with the number of hours being the keys OR
+//Create a list with the distance values inside and reference the index number within the function
+
+main()
+speed = 60
+distance1 = speed * 5
+distance2 = speed * 8
+distance3 = speed * 12
+// distancelist = [distance1, distance2, distance3]
+
+print("In 5 hours, the car would travel {} miles.\n In 8 hours, the car would travel {} miles.\n 
+In 12 hours, the car would travel {} miles.".format(distance1, distance2, distance3))
+End()
+
+6.  Write a program that will ask the user to enter the amount of a purchase. The program
+should then compute the state and county sales tax. Assume the state sales tax is 4 percent
+and the county sales tax is 2 percent. The program should display the amount of the purchase, the state sales tax, the county sales tax, the total sales tax, and the total of the sale
+(which is the sum of the amount of purchase plus the total sales tax).
+
+main()
+purchaseamount = input("Please enter the amount of your purchase.")
+statetax = .04
+countytax = .02
+total = (statetax * purchaseamount) + (countytax * purchaseamount) + purchaseamount
+
+7.  A car’s miles-per-gallon (MPG) can be calculated with the following formula:
+ MPG = Miles driven / Gallons of gas used
+Write a program that asks the user for the number of miles driven and the gallons of gas
+used. It should calculate the car’s MPG and display the result.
+
+// Would theoretically like to make this into a loop and ask the user if they are done
+// inputting values or if they would like to move on. All of the values that they input 
+// would then get added to a list or even do the keys and values of a dictionary.
+//HINT: May be wise to pull up my old class documentation
+
+main()
+milesdriven = input("Please enter the number of miles that you've driven.")
+gallonsused = input("Please enter the number of gallons that you have used.")
+mpg = milesdriven / gallonsused
+
+8.  Write a program that calculates the total amount of a meal purchased at a restaurant. The
+program should ask the user to enter the charge for the food, and then calculate the amount
+of a 15 percent tip and 7 percent sales tax. Display each of these amounts and the total.
+
+9. Write a program that converts Celsius temperatures to Fahrenheit temperatures. The formula is as follows:
+
+ F = (9/5)C + 32
+
+ The program should ask the user to enter a temperature in Celsius, and then display the
+temperature converted to Fahrenheit.
+
+
+10.  Last month Joe purchased some stock in Acme Software, Inc. Here are the details of the
+purchase:
+• The number of shares that Joe purchased was 1,000.
+• When Joe purchased the stock, he paid $32.87 per share.
+• Joe paid his stockbroker a commission that amounted to 2 percent of the amount he paid
+for the stock.
+Two weeks later Joe sold the stock. Here are the details of the sale:
+• The number of shares that Joe sold was 1,000.
+• He sold the stock for $33.92 per share.
+• He paid his stockbroker another commission that amounted to 2 percent of the amount
+he received for the stock.
+
+ Write a program that displays the following information:
+• The amount of money Joe paid for the stock.
+• The amount of commission Joe paid his broker when he bought the stock.
+• The amount that Joe sold the stock for.
+• The amount of commission Joe paid his broker when he sold the stock.
+• Display the amount of money that Joe had left when he sold the stock and paid his
+broker (both times). If this amount is positive, then Joe made a profit. If the amount is
+negative, then Joe lost money
