@@ -1,0 +1,65 @@
+In positional formatting
+	{:>10} <-- Pads 10 spaces to the left. What does the colon do? Does that mean to pad?
+	{:d} <-- I know that the letter means to signal what type the data is, but more 	explanation on {:10.5} etc.
+	Truncating and padding explained
+
+print('My favorite car is a {car} and motorcycle {motorcycle}'.format(**things)) <-- What do the stars mean?
+
+%s and %r, these are replaced by !s and !r, but are they just placeholders for ('test1', 'test2')? (Answered below)
+
+Format Symbol	Conversion
+%c	character
+%s	string conversion via str() prior to formatting
+%i	signed decimal integer
+%d	signed decimal integer
+%u	unsigned decimal integer
+%o	octal integer
+%x	hexadecimal integer (lowercase letters)
+%e	exponent notation
+%f	floating point real number
+
+
+what does it mean to append in python?
+Append: Adds its argument as a single element to the end of a list. The length of the list increases by one. ... If you append another list onto a list, the first list will be a single object at the end of the list.
+
+Lab 3B decrypting with XORs -- Do not understand at all, so will come back to
+
+Lab 3C started and easier due to if, elif, else statements
+	input = raw_input("> ") <-- Instructions example, what do the parentheses mean?
+	Once an option is chosen, do I have to put exit? How do I pull out of the loop?
+Lab 3D After completion, get user input to accept numbers and add them to a list that will go on 	until the user doesn't want to continue
+	Want to use the index values
+Asks user for int --> stores int in an index --> when user continues --> pulls from those location
+
+For Loops using dictionaries
+
+x = {'stu1':'James', 'stu2':'Bob', 'stu3':'Rengar'}
+
+for stu_id, name in x.items():
+    print("{}'s name is {}".format(stu_id, name))
+
+Iterative vs. Recursive Loops
+	Recursion is basically a function that executes multiple times by calling itself within 	its own function... CALLS ITSELF TO EXECUTE AGAIN
+
+Appending to a List Example - list.append(variable)
+
+shopList = [] 
+maxLengthList = 6
+while len(shopList) < maxLengthList:
+    item = input("Enter your Item to the List: ")
+    shopList.append(item)
+    print shopList
+print "That's your Shopping List"
+print shopList
+
+The class List section is helpful "listing" all the things that can be done.
+Map, Filter, and Reduce is beneficial. This section would be great for practicing.
+
+Dictionaries (Lab to practice is to 2H and is the grade calc from Code Academy)
+	Set and Frozenset - Need to go over/ explained
+	A set is an unordered collection of elements, immutable, but can't be used as a 	dictionary key or an element of another set. Frozensets are the same but immutable. 	Meaning that once created, cannot be added to, etc.
+
+Conversion Functions- Look at them and have explained in what cases you would need to use them.
+
+Python Pickle Library- serializing and deserializing
+“Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy.
