@@ -1,0 +1,5 @@
+file = input("Please enter the name of the file that you wish to open.")
+fileopen = open(file, 'r')
+contents = fileopen.read()
+print(contents)
+file.close()
