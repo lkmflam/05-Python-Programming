@@ -1,4 +1,5 @@
 def main():
+    #Ask user input for the month and the rainfall
     monthly_rainfall= [["January", ""], ["February", ""], ["March", ""], ["April", ""], ["May", ""], ["June", ""], ["July", ""], ["August", ""], ["September", ""], ["October", ""], ["November", ""], ["December", ""]]
     count = 0
     size = len(monthly_rainfall)
