@@ -1,4 +1,8 @@
+#Starts at 7 as there are 7 rows and 7 stars
 row = 7
+
+#As long as the number of rows isn't less than one (impossible) or once the number of rows end, it will print the number of stars specified
+#then decrements by one.
 while row >= 1:
     if row == 7:
         print("*******")
