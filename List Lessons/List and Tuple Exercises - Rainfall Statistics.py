@@ -15,7 +15,7 @@ def main():
         rainfall = int(input("Please enter the monthly rainfall: "))
 #The user will enter the rainfall amount and it will be coonverted to an integer so that it can be used in math later.
         monthly_rainfall[count][1] = rainfall
-#The rainfall amount for the month will be stored in the empty quotws for that month.
+#The rainfall amount for the month will be stored in the empty quotes for that month.
         average = (rainfall + average) / size
         total = rainfall + total
         count += 1
