@@ -6,11 +6,16 @@ def main():
     'CM241': {'1411', 'Lee', '1:00 p.m.' }}
     #print(course_catalog['CS101'])
     print("Welcome to the course catalog system.")
-    for coursenumber, information in course_catalog.items():
+    for coursenumber, course in course_catalog.items():
         print(coursenumber)
     coursenumber =input("Please enter the class for which you wish to view information: ")
-    for coursenumber, information in course_catalog.items():
+    #This is where the problems start. Figure out how to print the information for the specific course number chosen. 
+    for coursenumber, course in course_catalog.items():
         print('Course: ', coursenumber)
-        for information in course_catalog.items():
-            print(information)
+        for course, information in course_catalog.items():
+            print(course_catalog[0])
+
+            #print('guitar sound', instruments['guitar']['sound'])
+            course = 0
+            information = 0
 main()
